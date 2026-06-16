@@ -1,8 +1,5 @@
 ---
-status: approved
 name: architecture-decision-records
-source: everything-claude-code
-domain: process
 description: >
   ADR workflow and conventions for tracking architectural decisions.
   Adapted from everything-claude-code for neobank context.

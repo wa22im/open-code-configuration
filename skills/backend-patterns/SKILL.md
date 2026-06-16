@@ -1,8 +1,5 @@
 ---
-status: approved
 name: backend-patterns
-source: everything-claude-code
-domain: backend
 description: >
   Backend patterns for a Go+CDK+AWS serverless monorepo.
   Adapted from everything-claude-code for neobank context.

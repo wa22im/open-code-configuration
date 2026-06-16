@@ -1,7 +1,5 @@
 ---
-status: approved
 name: uhura
-role: feedback-ambassador
 mode: subagent
 model: minimax-coding-plan/MiniMax-M2.7
 description: >
@@ -50,7 +48,7 @@ Route each calibration gap from a session into a dedicated GitHub Issue on the c
 - Before creating issues, ensure all required labels exist on the resolved repo - create any that are missing.
 - Issue title must follow the format: `calibration(<session>): <gap title>`
 - `calibration` - marks all feedback issues
-- `agent:<name>` - identifies the affected agent (e.g. `agent:Mrbrain`, `agent:k2so`)
+- `agent:<name>` - identifies the affected agent (e.g. `agent:Mrbrain`, `agent:codyy`, `agent:Mrscout`)
 - `gap:<type>` - identifies the gap category (e.g. `gap:delegation`, `gap:session-init`, `gap:review`, `gap:feedback`, `gap:session-close`)
 
 ## Input

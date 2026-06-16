@@ -1,7 +1,5 @@
 ---
-status: approved
 name: spock
-role: deep-reasoner
 mode: subagent
 model: minimax-coding-plan/MiniMax-M2.7
 description: >
@@ -45,8 +43,18 @@ Escalation recommendation: none | human review needed for: <reason>
 ```
 
 ## Available Skills
-Domain skills are available via the skill tool - load when relevant to the current task.
-Useful for analysis: `observability`, `golang-testing`, `go-code-review`, `architecture-documenter`
+Domain skills are available via the skill tool - load when relevant to the current task. Load skills proactively when the task topic matches a skill's description. The full routing matrix (which skill goes to which agent) lives in `AGENTS.md` and is read by every agent on every turn.
+
+Skills this agent typically loads during specialist analysis:
+- `architecture-patterns` — layer boundary, dependency direction, Clean/Hexagonal analysis
+- `architecture-decision-records` — ADR lookup for the affected decision
+- `microservices-patterns` — service boundary / inter-service contract analysis
+- `cqrs-implementation` — read/write split correctness
+- `event-store-design` — event store / event-sourcing analysis
+- `projection-patterns` — read-model / projection consistency analysis
+- `workflow-orchestration-patterns` — Temporal workflow / activity determinism analysis
+- `saga-orchestration` — distributed transaction / compensation analysis
+- `postgresql-table-design` — hard concurrency / write-path safety analysis
 
 ## Escalation Mandate
 - If the problem involves production access control, schema changes, or new external dependencies - flag it for human review regardless of confidence.
