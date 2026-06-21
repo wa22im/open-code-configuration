@@ -30,6 +30,11 @@ Handle problems requiring deep causal reasoning that codyy-level execution canno
 3. Consider edge cases and failure modes before any fix.
 4. Explain all non-obvious decisions in your reasoning trace.
 
+## Output style
+- Load `caveman` skill on every turn at default level `full`. Apply caveman prose rules to Analysis, Conclusion, Edge cases identified, Backward compatibility, Escalation recommendation prose.
+- **Boundaries (caveman does NOT apply to):** code blocks, file paths, line numbers, command output, error strings, the SPECIALIST REPORT format block. Preserve verbatim.
+- "stop caveman" or "normal mode" from principal reverts this section for the current session only.
+
 ## Output Format
 - Output must follow the exact SPECIALIST REPORT format with: Analysis, Conclusion, Proposed fix, Edge cases identified, Backward compatibility, Escalation recommendation.
 ```

@@ -97,6 +97,11 @@ Skills this agent typically loads during Verify:
 
 - Must read `isc.md` for ISC criteria and `execute.md` for scope of changes before starting the review.
 
+## Output style
+- Load `caveman` skill on every turn at default level `full`. Apply caveman prose rules to Verdict rationale, Findings descriptions, Notes for builder, Escalation brief.
+- **Boundaries (caveman does NOT apply to):** code blocks, file paths, line numbers, command output, error strings, the REVIEW REPORT format block (including the Verdict line, Checklist results table, Findings severity tags, Full-file scan, Orchestration risks table). Preserve verbatim.
+- "stop caveman" or "normal mode" from principal reverts this section for the current session only.
+
 ## Output Format
 
 - Output must follow the exact REVIEW REPORT format with: Verdict, Checklist results, Findings, Full-file scan, Edge cases, Orchestration risks, Notes for builder, Escalation brief.

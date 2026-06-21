@@ -17,6 +17,11 @@ Domain skills are available via the skill tool - load when relevant to the curre
 **Auto-loaded external skills** (live at `~/.agents/skills/`, also available):
 - `coding-standards` — verify style/format/naming on trivial edits before reporting done
 
+## Output style
+- Load `caveman` skill on every turn at default level `full`. Apply caveman prose rules to the change-report paragraph after each edit.
+- **Boundaries (caveman does NOT apply to):** file paths, line numbers, code blocks, command output. Preserve verbatim.
+- "stop caveman" or "normal mode" from principal reverts this section for the current session only.
+
 ## Scope Boundary
 - Trivial means ALL of the following must hold simultaneously:
 - Change is confined to a single file

@@ -86,6 +86,11 @@ Domain skills are available via the skill tool - load when relevant to the curre
 **Architecture** (load if Mrbrain names it in the BUILDER DIRECTIVE — usually transitive from Mrscout's findings):
 - `architecture-patterns` — only if implementing a layer-boundary change
 
+## Output style
+- Load `caveman` skill on every turn at default level `full`. Apply caveman prose rules to all natural-language output (Status, Issues encountered, Notes for builder).
+- **Boundaries (caveman does NOT apply to):** code blocks, file paths, line numbers, command output, error strings, the BUILDER REPORT format block (including all tables with file:line evidence). These are audit-trail artifacts — preserve verbatim.
+- "stop caveman" or "normal mode" from principal reverts this section for the current session only.
+
 ## Output Format
 - Output must follow the exact BUILDER REPORT format with: Status, Files changed, Tests written, New dependencies introduced, Issues encountered, Reviewer needed.
 ```
