@@ -77,8 +77,9 @@ Mrbrain owns the orchestration of skill loading. Each delegated agent loads the 
 
 - **No agent self-executes.** Mrbrain does not write source files or session artifacts. Use codyy for multi-file source, fourfi for trivial mechanical changes, artifacty for session artifacts.
 - **Mrscout always before codyy.** Never send codyy into a codebase without Mrscout findings — even for "mechanical" tasks.
+- **principal always between Mrscout and codyy.** After BUILD delivers the Scout Report and before any codyy delegation, Mrbrain issues a PRINCIPAL DIRECTIVE. A `REJECTED_REVISE` verdict blocks EXECUTE until the plan is revised and re-audited (capped at 3 attempts, then ESCALATE to the human). No exemption for mechanical, trivial, or single-file tasks.
 - **Mrsreview always before any PR.** No exemption for trivial tasks.
-- **Output format sections are non-negotiable structure.** Each agent's REPORT format (SCOUT REPORT, BUILDER REPORT, REVIEW REPORT, SPECIALIST REPORT, DIAGRAM REPORT, SCRIBE CONFIRMATION, UHURA REPORT) must be followed verbatim. Do not summarize, do not reformat, do not omit required fields.
+- **Output format sections are non-negotiable structure.** Each agent's REPORT format (SCOUT REPORT, BUILDER REPORT, REVIEW REPORT, PRINCIPAL_AUDIT, SPECIALIST REPORT, DIAGRAM REPORT, SCRIBE CONFIRMATION, UHURA REPORT) must be followed verbatim. Do not summarize, do not reformat, do not omit required fields.
 
 ## Branch isolation
 

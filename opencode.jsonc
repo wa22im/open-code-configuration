@@ -14,6 +14,17 @@
     "paths": ["~/.config/opencode/skills"]
   },
 
+  "mcp": {
+    "figma": {
+      "type": "local",
+      "command": ["npx", "-y", "figma-developer-mcp", "--stdio"],
+      "environment": {
+        "FIGMA_API_KEY": "REDACTED"
+      },
+      "enabled": true
+    }
+  },
+
   "permission": {
     "edit": "ask",
     "bash": {
