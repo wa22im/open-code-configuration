@@ -54,8 +54,6 @@
     "max_lines": 200,
     "max_bytes": 8192
   },
-
-  "mcp": {
     "codebase-memory": {
       "type": "local",
       "command": [
@@ -65,5 +63,4 @@
       ],
       "enabled": true
     }
-  }
 }
