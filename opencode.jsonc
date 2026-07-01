@@ -40,6 +40,7 @@
     },
     "external_directory": {
       "~/.opencode/**": "allow",
+      "~/.cache/codebase-memory-mcp/**": "allow",
       "**": "ask"
     }
   },
@@ -52,5 +53,17 @@
   "tool_output": {
     "max_lines": 200,
     "max_bytes": 8192
+  },
+
+  "mcp": {
+    "codebase-memory": {
+      "type": "local",
+      "command": [
+        "~/.local/bin/codebase-memory-mcp",
+        "--ui=true",
+        "--port=9749"
+      ],
+      "enabled": true
+    }
   }
 }

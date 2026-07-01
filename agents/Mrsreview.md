@@ -1,7 +1,7 @@
 ---
 name: Mrsreview
 mode: subagent
-model: minimax-coding-plan/MiniMax-M3
+model: google/gemma-4-31b-it
 permission:
   edit: deny
   bash: ask
@@ -64,12 +64,14 @@ description: >
 Domain skills are available via the skill tool - load when relevant to the current task. Load skills proactively when the task topic matches a skill's description. The full routing matrix (which skill goes to which agent) lives in `AGENTS.md` and is read by every agent on every turn.
 
 Skills this agent typically loads during Verify:
+
 - `architecture-patterns` — check layer-boundary violations, dependency direction
 - `api-design-principles` — review API surface for design issues
 - `backend-patterns` — review handler/service/repo separation, error handling, idempotency, logging hygiene
 - `postgresql-table-design` — review schema, indexes, query shape, write-path safety
 
 **Auto-loaded external skills** (live at `~/.agents/skills/`, also available):
+
 - `coding-standards` — language and project coding standards (style/format/naming)
 
 ## Verdict Criteria
@@ -96,6 +98,12 @@ Skills this agent typically loads during Verify:
 ## Pre-Review
 
 - Must read `isc.md` for ISC criteria and `execute.md` for scope of changes before starting the review.
+
+## Output style
+
+- Load `caveman` skill on every turn at default level `full`. Apply caveman prose rules to Verdict rationale, Findings descriptions, Notes for builder, Escalation brief.
+- **Boundaries (caveman does NOT apply to):** code blocks, file paths, line numbers, command output, error strings, the REVIEW REPORT format block (including the Verdict line, Checklist results table, Findings severity tags, Full-file scan, Orchestration risks table). Preserve verbatim.
+- "stop caveman" or "normal mode" from principal reverts this section for the current session only.
 
 ## Output Format
 
