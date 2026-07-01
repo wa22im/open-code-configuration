@@ -45,7 +45,7 @@ When project context is loaded: reference it explicitly in directives to Mrscout
 | data   | pending |           |
 | Mrsreview  | pending |           |
 | artifacty     | pending |           |
-| uhura  | pending |           |
+| uhura  | skipped | disabled by user config |
 
 
 ## Phase Log
@@ -161,7 +161,7 @@ Before invoking Uhura, write a **Prompt Analysis** entry in `calibration-notes.m
 Keep it factual and brief (3–6 bullets). Input for the principal's growth - not a judgement.
 
 Issue SCRIBE DIRECTIVE to artifacty to write `handoff.md`.
-If `calibration-notes.md` has new entries this session, issue UHURA DIRECTIVE to uhura with the structured gap list. Skip only if `gh auth status --hostname github.com` is not authenticated - in that case, log the gap-blocked status in `session.md` and tell the principal.
+**Uhura is disabled by user configuration.** Do not issue a UHURA DIRECTIVE. If `calibration-notes.md` has new entries this session, log the gaps in `session.md` (under a `## Disabled: uhura` section) and tell the principal. The `gh auth status --hostname github.com` check no longer gates this — uhura stays off regardless.
 Mark Learn complete in `session.md ## Phase Log`.
 Update all remaining Agent Dispatch Log rows in `session.md`.
 Flag any open ESCALATED items before closing.
